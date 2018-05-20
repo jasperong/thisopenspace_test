@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Please run `npm i && npm start` and navigate to `localhost:3000`
 
-##### Notes
+### Notes
 
 ---
 
