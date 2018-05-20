@@ -1,9 +1,6 @@
 import React from 'react';
 
 import SingleListing from './SingleListing';
-import withInfiniteScroll from './withInfiniteScroll';
-
-import './index.css';
 
 const Listings = ({ endReached, listings = [], handleFetchPage }) => (
   <div className="listings__container" id="list">
@@ -11,4 +8,4 @@ const Listings = ({ endReached, listings = [], handleFetchPage }) => (
   </div>
 );
 
-export default withInfiniteScroll(Listings);
+export default Listings;

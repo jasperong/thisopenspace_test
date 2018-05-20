@@ -4,6 +4,8 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import Layout from './Layout';
 import Listings from './Listings';
 import { fetchPage } from '../request';
+import './index.css';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -53,7 +55,13 @@ class App extends Component {
           isLoading={isLoading}
         />
         {isLoading && !endReached ? <FontAwesomeIcon icon="spinner" spin pulse size="3x" /> : null}
-        {endReached ? <p>The End</p> : null}
+        {endReached ? (
+          <p>The End</p>
+        ) : (
+          <button className="load-button" onClick={this.handleFetchPage}>
+            Load More..
+          </button>
+        )}
       </Layout>
     );
   }
