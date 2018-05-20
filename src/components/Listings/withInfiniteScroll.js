@@ -4,7 +4,6 @@ const withInfiniteScroll = ComponentToRender =>
   class WithInfiniteScroll extends Component {
     componentDidMount() {
       window.addEventListener('scroll', this.onScroll, false);
-      window.scrollTo(0, 0);
     }
 
     componentWillUnmount() {
@@ -13,8 +12,9 @@ const withInfiniteScroll = ComponentToRender =>
 
     onScroll = () => {
       const { handleFetchPage, isLoading, listings } = this.props;
+
       if (
-        window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 &&
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 10 &&
         listings.length &&
         !isLoading
       ) {
